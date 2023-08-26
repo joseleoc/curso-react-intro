@@ -4,6 +4,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
+      <TodoCount completed={5} total={10} />
+
+
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,3 +31,22 @@ function App() {
 }
 
 export default App;
+
+function TodoItem(){
+
+  return (
+    <li>
+      <span>V</span>
+      <p>Llorar con la llorona</p>
+      <span>X</span>
+    </li>
+  )
+}
+
+function TodoCount(props){
+  return (
+    <h1>
+      Completaste {props.completed} de {props.total} TODOs
+    </h1>
+  )
+}
